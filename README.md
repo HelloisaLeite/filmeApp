@@ -33,34 +33,54 @@ programa que instala as dependências e roda o projeto.
 
 ---
 
-## Passo 2 — Baixar o projeto
+## Passo 2 — Instalar o Git (só na primeira vez)
 
-Você vai receber o projeto do professor de uma destas formas:
+Vamos baixar o projeto usando o **Git**. No Windows, instale assim:
 
-- **Como arquivo .zip:** baixe o arquivo, clique com o botão direito nele e
-  escolha **Extrair tudo...**. Guarde a pasta extraída em um lugar fácil de
-  achar, por exemplo `Documentos`.
-- **Pelo GitHub (se o professor passar um link):** clique no botão verde
-  **Code** e depois em **Download ZIP**, e extraia como acima.
+1. Acesse <https://git-scm.com/download/win> (o download começa sozinho).
+2. Abra o arquivo baixado e clique em **Next / Avançar** até o fim, sem mudar
+   nada, e depois em **Install / Instalar**.
+3. Para conferir, abra o **PowerShell** (tecla Windows, digite `powershell`) e
+   digite:
 
-Ao final, você terá uma pasta chamada `filmeApp` (ou parecido) com os arquivos
-do projeto dentro.
+   ```bash
+   git --version
+   ```
+
+   Se aparecer um número de versão, deu certo.
 
 ---
 
-## Passo 3 — Abrir a pasta no terminal
+## Passo 3 — Clonar (baixar) o projeto
 
-Você precisa "entrar" na pasta do projeto pelo terminal.
+"Clonar" é baixar uma cópia do projeto que está no GitHub para o seu computador.
 
-**Jeito mais fácil (recomendado):** instale o **VS Code**
-(<https://code.visualstudio.com>), abra o programa, vá em
-**File > Open Folder / Arquivo > Abrir Pasta** e escolha a pasta do projeto.
-Depois abra o terminal em **Terminal > New Terminal / Novo Terminal**. Ele já
-vai estar na pasta certa.
+1. Abra o **PowerShell** e vá até a pasta onde você quer guardar o projeto,
+   por exemplo a pasta Documentos:
 
-**Sem o VS Code:** abra a pasta do projeto no Explorer, clique na barra de
-endereço no topo, digite `powershell` e aperte Enter. O PowerShell abre já
-dentro da pasta.
+   ```bash
+   cd Documentos
+   ```
+
+2. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/JefersonQueiroga/filmeApp.git
+   ```
+
+3. Entre na pasta que acabou de ser criada:
+
+   ```bash
+   cd filmeApp
+   ```
+
+Pronto: agora o terminal está dentro da pasta do projeto.
+
+> Dica: para abrir esse projeto no editor, instale o **VS Code**
+> (<https://code.visualstudio.com>). Com o terminal já dentro da pasta
+> `filmeApp`, digite `code .` para abrir o projeto inteiro nele. Dentro do
+> VS Code você também pode abrir um terminal em
+> **Terminal > New Terminal / Novo Terminal**, que já vem na pasta certa.
 
 ---
 
