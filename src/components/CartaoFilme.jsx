@@ -10,6 +10,8 @@ function CartaoFilme({ filme }) {
   // Deixamos o estado aqui dentro para cada cartão cuidar do seu próprio botão.
   const [assistido, setAssistido] = useState(filme.assistido)
 
+  const [curtidas, setCurtidas] = useState(0); //questão 5
+
   // Inverte o valor: se era true vira false, se era false vira true.
   function alternarAssistido() {
     setAssistido(!assistido)
@@ -18,7 +20,10 @@ function CartaoFilme({ filme }) {
   return (
     <div className="cartao">
       <h2 className="cartao-titulo">{filme.titulo}</h2>
-      <p className="cartao-ano">Ano: {filme.ano}</p>
+
+      {filme.mostrarAno ? <p className="cartao-ano">Ano: {filme.ano}</p> : null}
+
+      <p className="cartao-genero">Gênero: {filme.genero}</p>
 
       {/* Mostramos um texto diferente dependendo do estado "assistido". */}
       <p className="cartao-status">
@@ -26,9 +31,18 @@ function CartaoFilme({ filme }) {
       </p>
 
       {/* Ao clicar, chamamos a função que muda o estado. */}
-      <button className="cartao-botao" onClick={alternarAssistido}>
-        Marcar como {assistido ? 'não assistido' : 'assistido'}
-      </button>
+
+      <div className="cartao-botoes">
+        <button className="cartao-botao" onClick={alternarAssistido}>
+          Marcar como {assistido ? 'não assistido' : 'assistido'}
+        </button>
+
+        <button className="cartao-botao" onClick={() => setCurtidas(curtidas + 1)}>
+          Curtir
+        </button>
+
+        <span>{curtidas}</span>
+      </div>
     </div>
   )
 }

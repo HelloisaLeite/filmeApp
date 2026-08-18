@@ -52,12 +52,13 @@
 }
 
 /* Tela "Sobre": um texto centralizado e com largura limitada. */
-.sobre {
+.sobre, .contato {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
   color: #333;
 }
+
 
 /* A lista usa Flexbox para colocar os cartões LADO A LADO.
    "flex-wrap: wrap" faz os cartões pularem de linha quando não couberem. */
@@ -85,7 +86,7 @@
   margin: 0 0 8px 0;
 }
 
-.cartao-ano {
+.cartao-ano, .cartao-genero {
   color: #666;
   margin: 0 0 8px 0;
 }
@@ -109,4 +110,16 @@
 
 .cartao-botao:hover {
   background-color: #3048c0;
+}
+
+.cartao-botoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.rodape {
+  text-align: center;
+  margin-top: 32px;
+  color: #666;
 }
