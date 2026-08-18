@@ -32,7 +32,7 @@ curtidas ao lado do botão.
 Objetivo: praticar o estado (useState) para guardar e atualizar um valor que muda com a interação do usuário.
 
 
-6. Criar uma terceira tela na navegação
+6. Criar uma terceira tela na navegação ----ok----
 Hoje o menu tem duas telas: "Filmes" e "Sobre". Crie uma terceira tela
 chamada "Contato" (arquivo src/components/PaginaContato.jsx) com um texto
 simples, por exemplo um e-mail. Depois:
